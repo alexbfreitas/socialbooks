@@ -2,7 +2,7 @@ package com.algaworks.socialbooks;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-//alterado na estação de casa
+
 @SpringBootApplication
 public class SocialbooksapiApplication {
 
