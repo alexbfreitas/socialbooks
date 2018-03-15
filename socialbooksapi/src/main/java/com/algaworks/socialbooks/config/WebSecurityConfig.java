@@ -1,4 +1,4 @@
-package com.alagworks.socialbooks.config;
+package com.algaworks.socialbooks.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -18,7 +18,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	protected void configure(HttpSecurity http) throws Exception {
 		http.
-			authorizeRequests().anyRequest().authenticated()
+			authorizeRequests()
+			.antMatchers("/h2-console/**").permitAll()
+			.anyRequest().authenticated()
 			.and()
 				.httpBasic()
 			.and()
